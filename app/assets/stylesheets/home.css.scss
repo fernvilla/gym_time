@@ -1,3 +1,69 @@
 // Place all the styles related to the home controller here.
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
+@import "bootstrap";
+@import url(http://fonts.googleapis.com/css?family=Audiowide);
+
+body {
+	margin: 0;
+	font-family: 'Audiowide', cursive;
+	text-shadow: 3px 3px 2px #000000;
+}
+
+#top {
+	background-image: url("../images/barbell.jpg");
+	background-repeat: no-repeat;
+	background-size: 98% 100% ;
+	background-position: center;
+	background-color: #000000;
+	top: 0;
+	height: 62%;
+	width: 100%;
+	position: absolute;
+}
+
+#login {
+	height: 25%;
+	width: 25%;
+	position: absolute;
+	margin: auto;
+  top:0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  background-color: rgba(0,0,0,0.5);
+	box-shadow: 5px 5px 5px #000000;
+	z-index: 1;
+	color: #FFFFFF;
+	border-radius: 10px;
+	border: 1px solid #777777;
+	text-align: center;
+}
+
+#bottom {
+	background-color: #000;
+	bottom: 0;
+	height: 38%;
+	width: 100%;
+	position: absolute;
+}
+
+button * {
+	height: 30%;
+	width: 30%;
+}
+
+.info {
+	width: 33%;
+	float: left;
+	margin: 0 auto;
+	text-align: center;
+	color: #FFF;
+	font-size: 10px;
+}
+
+#wrapper {
+	width: 70%;
+	margin: 0 auto;
+	text-align: center;
+}

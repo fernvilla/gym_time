@@ -1,6 +1,7 @@
 // Place all the styles related to the home controller here.
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
+
 @import "bootstrap";
 @import url(http://fonts.googleapis.com/css?family=Audiowide);
 
@@ -17,7 +18,7 @@ body {
 	background-position: center;
 	background-color: #000000;
 	top: 0;
-	height: 62%;
+	height: 65%;
 	width: 100%;
 	position: absolute;
 }
@@ -27,11 +28,11 @@ body {
 	width: 25%;
 	position: absolute;
 	margin: auto;
-  top:0;
+  top: 0;
   bottom: 0;
   left: 0;
   right: 0;
-  background-color: rgba(0,0,0,0.5);
+  background-color: rgba(0,0,0,0.4);
 	box-shadow: 5px 5px 5px #000000;
 	z-index: 1;
 	color: #FFFFFF;
@@ -43,14 +44,14 @@ body {
 #bottom {
 	background-color: #000;
 	bottom: 0;
-	height: 38%;
+	height: 35%;
 	width: 100%;
 	position: absolute;
 }
 
 button * {
-	height: 30%;
-	width: 30%;
+	max-height: 30%;
+	max-width: 30%;
 }
 
 .info {

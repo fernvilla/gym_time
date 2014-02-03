@@ -14,7 +14,7 @@ body {
 #top {
 	background-image: url("../images/barbell.jpg");
 	background-repeat: no-repeat;
-	background-size: 98% 100% ;
+	background-size: 99% 100% ;
 	background-position: center;
 	background-color: #000000;
 	top: 0;
@@ -23,9 +23,17 @@ body {
 	position: absolute;
 }
 
+#bottom {
+	background-color: #000;
+	bottom: 0;
+	height: 35%;
+	width: 100%;
+	position: absolute;
+}
+
 #login {
 	height: 25%;
-	width: 25%;
+	width: 28%;
 	position: absolute;
 	margin: auto;
   top: 0;
@@ -39,14 +47,6 @@ body {
 	border-radius: 10px;
 	border: 1px solid #777777;
 	text-align: center;
-}
-
-#bottom {
-	background-color: #000;
-	bottom: 0;
-	height: 35%;
-	width: 100%;
-	position: absolute;
 }
 
 button * {

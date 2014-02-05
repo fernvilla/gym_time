@@ -1,3 +1,31 @@
 // Place all the styles related to the workouts controller here.
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
+
+body {
+	margin: 0;
+	padding: 0;
+	background-color: #353639;
+	color: white;
+}
+
+.navbar {
+	padding: 0 30px;
+	background: #000;
+	color: #FFF;
+	border: none;
+}
+
+.navbar .navbar-header > a {
+	color: #FFF;
+	font-size: 20px;
+}
+
+.navbar .nav > li > a {
+	color: #FFF;
+	font-size: 12px;
+}
+
+.navbar .nav > li > a:hover {
+	color: #807848;
+}

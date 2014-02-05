@@ -12,9 +12,9 @@ body {
 }
 
 #top {
-	background-image: url("../images/barbell.jpg");
+	background-image: url("barbell.jpg");
 	background-repeat: no-repeat;
-	background-size: 97% 100% ;
+	background-size: 98% 100% ;
 	background-position: center;
 	background-color: #000000;
 	top: 0;
@@ -37,7 +37,7 @@ img {
 
 #login {
 	height: 70%;
-	width: 20%;
+	width: 19%;
 	position: absolute;
 	margin: auto;
   top: 0;
@@ -52,11 +52,6 @@ img {
 	border: 1px solid #777777;
 	text-align: center;
 	padding: 15px;
-}
-
-button * {
-	max-height: 30%;
-	max-width: 30%;
 }
 
 .info {

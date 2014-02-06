@@ -14,7 +14,7 @@ html, body {
 #top {
 	background-image: url("barbell.jpg");
 	background-repeat: no-repeat;
-	background-size: 98% 100% ;
+	background-size: 98% 105% ;
 	background-position: center;
 	background-color: #000000;
 	top: 0;
@@ -36,8 +36,8 @@ img {
 }
 
 #login {
-	height: 70%;
-	width: 19%;
+	height: 310px;
+	width: 270px;
 	position: absolute;
 	margin: auto;
   top: 0;
@@ -68,3 +68,9 @@ img {
 	margin: 0 auto;
 	text-align: center;
 }
+
+#month {
+	text-align: center;
+	color: #000;
+}
+

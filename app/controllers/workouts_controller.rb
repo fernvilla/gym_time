@@ -1,6 +1,7 @@
 class WorkoutsController < ApplicationController
   def index
   	@workouts = Workout.all
+    @date = Date.today
   end
 
   def new

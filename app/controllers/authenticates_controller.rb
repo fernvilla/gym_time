@@ -9,11 +9,14 @@ class AuthenticatesController < ApplicationController
 	end
 
 	def create
-		user = User.find_by(username: params[:user][:username])
+		user = User.find_by(params[:username])
 		if user.authenticated?(params[:user][:password])
 			session[:user_id] = user.id
 			redirect_to workouts_path
-		end
+		else
+			flash[:notice] = "There is an error with your submission. Please make sure that the form is completely filled."
+    	render 'new'
+  	end
 	end
 
 	def destroy

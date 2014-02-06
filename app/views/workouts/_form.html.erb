@@ -1,0 +1,19 @@
+
+<%= form_for @workout do |f| %>
+	<div>
+		<%= f.label :body_part %><br />
+		<%= f.text_field :body_part %>
+	</div>
+
+	<div>
+		<%= f.label :exercise %><br />
+		<%= f.text_field :exercise %>
+	</div>
+
+	<div>
+			<%= f.label :workout_date%> <br />
+			<%= f.date_select :workout_date %>
+	</div>
+	<br>
+	<div><%= f.submit %></div>
+<% end %>

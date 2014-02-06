@@ -1,2 +1,4 @@
-<h1>Workouts#show</h1>
-<p>Find me in app/views/workouts/show.html.erb</p>
+<%= render partial: 'nav' %>
+
+<h1><%= @workout.body_part %></h1>
+<h3><%= @workout.exercise %></h3>

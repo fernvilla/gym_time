@@ -13,11 +13,12 @@ html, body {
 	background: #000;
 	color: #FFF;
 	border: none;
+	padding: 0 40px;
 }
 
 .navbar .navbar-header > p >a {
 	color: #FFF;
-	font-size: 25px;
+	font-size: 30px;
 	text-decoration: none;
 }
 
@@ -28,7 +29,7 @@ html, body {
 }
 
 .navbar .nav > li > a:hover {
-	color: #807848;
+	color: #777777;
 }
 
 input {
@@ -36,18 +37,29 @@ input {
 }
 
 .new {
-	margin: 0 auto;
+	margin: 100px auto;
 	width: 400px;
 	height: 400px;
 	background-color: #000;	
 	color: #FFF;
 	text-align: center;
 	padding: 10px;
-	box-shadow: 2px 2px 2px #000;
+	box-shadow: 3px 3px 2px #000;
 	border-radius: 10px;
+	border: 1px solid #777777;
 }
 
 a {
-	color: #9a9e9f;
-	text-decoration: underline;
+	color: #777777;
+	text-decoration: none;
+}
+
+#calendar {
+	margin: 0 auto;	
+	width: 70%;
+	height: 600px;
+	background-color: #FFF;
+	padding: 30px;
+	border-radius: 10px;
+	box-shadow: 3px 3px 2px #000;
 }

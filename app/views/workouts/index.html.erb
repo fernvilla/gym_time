@@ -1,6 +1,9 @@
 <%= render partial: 'nav' %>
 <br>
-<% @workouts.each do |workout| %> 
-  <p><%= link_to workout.body_part, workout %></p>
-<% end %>
- 
+
+<div id="calendar">
+  <p><%= link_to "Create A New Workout", new_workout_path %></p>
+  <% @workouts.each do |workout| %> 
+    <p><%= link_to workout.body_part, workout %></p>
+  <% end %>
+</div> 

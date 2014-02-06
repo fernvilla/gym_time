@@ -1,2 +1,13 @@
-<h1>Users#new</h1>
-<p>Find me in app/views/users/new.html.erb</p>
+<!-- Note that it must include workout/... -->
+<%= render partial: 'workouts/nav' %>
+
+<div class="workout">
+	<h1>New User</h1>
+	<%=form_for @user do |f|%><br>
+		<p><%=f.text_field :username, :placeholder => "Create username"%></p><br>
+		<p><%=f.password_field :password, :placeholder => "Create password" %></p><br>
+		<p><%= f.submit "Create Account", :class=>"btn btn-default btn-lg" %></p>
+	<% end %>
+	<br>
+	<p><%= link_to "Back To Main Page", root_path %></p>
+</div>

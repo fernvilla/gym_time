@@ -9,6 +9,6 @@ class UsersController < ApplicationController
 
   def create
   	User.create(params[:user].permit(:username, :password))
-  	redirect_to users_path
+  	redirect_to workouts_path
   end
 end

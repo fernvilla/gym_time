@@ -1,4 +1,13 @@
 <!-- Note that it must include workout/... -->
 <%= render partial: 'workouts/nav' %>
-<h1>Authenticates#new</h1>
-<p>Find me in app/views/authenticates/new.html.erb</p>
+
+<div class="workout">
+	<h1>Log In</h1>
+	<%= form_for @user, {url:"/authenticates", method:"post"} do |user|%><br>
+		<p><%= user.text_field :username, :placeholder => " Enter your username" %></p><br>
+		<p><%= user.password_field :password, :placeholder => " Enter your password" %></p><br>
+		<p><%= user.submit "Log In", :class=>"btn btn-default btn-lg" %></p>
+	<%end%>
+	<br>
+	<p><%= link_to "Back To Main Page", root_path %></p>
+</div>

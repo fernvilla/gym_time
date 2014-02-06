@@ -65,15 +65,13 @@ a {
 	box-shadow: 3px 3px 2px #000;
 }
 
-/*#show {
-	margin: 100px auto;
-	width: 400px;
-	height: 400px;
-	background-color: #000;	
-	color: #FFF;
+.notice, .error {
 	text-align: center;
-	padding: 10px;
-	box-shadow: 3px 3px 2px #000;
-	border-radius: 10px;
-	border: 1px solid #777777;
-}*/
+	color:#419f34;
+}
+
+.btn-primary {
+	background-color: #000;
+	border: none;
+	box-shadow: 1px 1px 3px #000;
+}

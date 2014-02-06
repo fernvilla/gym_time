@@ -3,5 +3,5 @@
 	<h2>Edit Workout</h2>
 	<%= render partial: 'form' %>
 	<br>
-	<p><%= link_to "Delete Workout", @workout,{method: :delete} %>&nbsp;&nbsp;&nbsp;<%= link_to "Go Back", workouts_path %></p>
+	<p><%= link_to "Delete Workout", @workout,{method: :delete, confirm: "Are You Sure You Want To Delete This Workout?"} %>&nbsp;&nbsp;&nbsp;<%= link_to "Go Back", workouts_path %></p>
 </div>

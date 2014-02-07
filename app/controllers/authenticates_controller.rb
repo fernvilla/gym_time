@@ -3,6 +3,7 @@ class AuthenticatesController < ApplicationController
 	def new
 		if current_user
 			redirect_to workouts_path
+			flash[:notice] = "You're already logged in as #{current_user.username}"
 		else
 			@user = User.new
 		end

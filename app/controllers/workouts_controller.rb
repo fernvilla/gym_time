@@ -6,7 +6,7 @@ class WorkoutsController < ApplicationController
       @date = Date.today
     else
       redirect_to new_authenticate_path
-      flash[:notice] = "Please log in first to see Calendar"
+      flash[:notice] = "Please log in first to see your workouts"
     end
   end
 

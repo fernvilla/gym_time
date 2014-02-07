@@ -4,9 +4,14 @@ class UsersController < ApplicationController
   end
 
   def new
-  	@user = User.new
-    ## Clear notice from reappearing automatically after initial submission error
+    if current_user
+      redirect_to workouts_path
+      flash[:notice] = "You already have an account. Logged in as #{current_user.username}"
+    else
+  	 @user = User.new
+     ## Clear notice from reappearing automatically after initial submission error
     flash[:notice] = nil
+    end
   end
 
   def create

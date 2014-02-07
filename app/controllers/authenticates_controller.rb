@@ -10,7 +10,7 @@ class AuthenticatesController < ApplicationController
 
 	def create
 		user = User.find_by(username: params[:user][:username])
-		if user.authenticated?(params[:user][:password])
+		if user.authenticates_with_password?(params[:user][:password])
 			# session[:user_id] = user.id
 			redirect_to workouts_path
 		else

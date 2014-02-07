@@ -1,9 +1,10 @@
 <%= render partial: 'nav' %>
 
 <div class="workout">
-	<h1><%= @workout.body_part + " Workout" %></h1>
-	<h3><%= "- " + @workout.exercise %></h3>
-
+	<h3><%= @workout.body_part + " Workout (#{@workout.workout_date})" %></h3>
+	<h3><u><%= "Exercises" %></u></h3>
+	<h4><%= "- " + @workout.exercise %></h4>
+	<br>
 	<p><%= link_to "Edit Workout", edit_workout_path %>&nbsp;&nbsp;&nbsp;<%= link_to "Go Back", workouts_path %> 
 	</p>
 </div>

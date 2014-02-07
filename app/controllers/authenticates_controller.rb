@@ -1,5 +1,4 @@
 class AuthenticatesController < ApplicationController
-
 	def new
 		if current_user
 			redirect_to workouts_path
@@ -15,13 +14,18 @@ class AuthenticatesController < ApplicationController
 			session[:user_id] = user.id
 			redirect_to workouts_path
 		else
-			flash[:notice] = "There is an error with your submission. Please make sure that the form is completely filled."
-    	render 'new'
+				redirect_to new_user_path
+				flash[:notice] = "There is an error with your submission. Please make sure that the form is completely filled"
   	end
 	end
 
 	def destroy
-		session[:user_id] = nil
-		redirect_to new_authenticate_path
+		if current_user
+			session[:user_id] = nil
+			redirect_to new_authenticate_path
+		else
+			redirect_to new_authenticate_path
+			flash[:notice] = " You are not currently logged in"
+		end
 	end
 end

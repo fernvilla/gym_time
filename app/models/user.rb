@@ -1,5 +1,6 @@
 require 'bcrypt'
 class User
+
 	include Mongoid::Document
 	attr_accessor :password
 

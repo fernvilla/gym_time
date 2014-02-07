@@ -11,11 +11,13 @@ html, body {
 }
 
 .navbar {
-	background: #232323;
+	background: #464748;
 	color: #FFF;
 	border: none;
+	height: 40px;
 	padding: 0 40px;
 	box-shadow: 2px 2px 2px #000;
+	border-radius: 0;
 }
 
 .navbar .navbar-header > p >a {
@@ -29,6 +31,7 @@ html, body {
 	color: #FFF;
 	font-size: 12px;
 	text-decoration: none;
+	text-shadow: 1px 1px 1px #000;
 }
 
 .navbar .nav > li > a:hover {
@@ -60,11 +63,13 @@ a {
 
 #calendar {
 	margin: 0 auto;	
+	margin-top: 40px;
 	width: 70%;
 	height: 600px;
 	background-color: #FFF;
-	padding: 10px 30px;
+	padding: 10px 25px;
 	border-radius: 10px;
+	border: 2px solid #464748;
 	box-shadow: 3px 3px 2px #000;
 }
 
@@ -77,4 +82,18 @@ a {
 	background-color: #000;
 	border: none;
 	box-shadow: 1px 1px 3px #000;
+}
+
+.btn-primary:hover {
+	background-color: #777777;
+	border: none;
+	box-shadow: 1px 1px 3px #000;
+}
+
+.btn > a {
+	color: #000;
+}
+
+.btn-danger > a, .btn-success > a {
+	color: #FFF;
 }

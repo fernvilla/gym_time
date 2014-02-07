@@ -1,7 +1,9 @@
 <%= render partial: 'nav' %>
 <div id="calendar">
 	<p class="notice"><%= flash[:notice] %><%= flash[:error] %></p>
+	
 	<h3 id="month"><%= @date.strftime("%B %Y") %></h3>
+
   <p><%= link_to "Create A New Workout", new_workout_path, :class=>"btn btn-primary btn-xs" %></p>
 
   <% @workouts.each do |workout| %> 

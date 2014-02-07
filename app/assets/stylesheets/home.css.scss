@@ -43,11 +43,12 @@ img {
   left: 0;
   right: 0;
   background-color: rgba(0,0,0,0.7);
-	box-shadow: 5px 5px 5px #000000;
+	box-shadow: 5px 5px 5px #000;
+	text-shadow: 1px 1px 1px #000;
 	z-index: 1;
-	color: #FFFFFF;
+	color: #FFF;
 	border-radius: 10px;
-	border: 1px solid #777777;
+	border: 1px solid #777;
 	text-align: center;
 	padding: 15px;
 }
@@ -70,5 +71,10 @@ img {
 #month {
 	text-align: center;
 	color: #000;
+}
+
+.btn {
+	margin-bottom: 15px;
+	text-shadow: none;
 }
 

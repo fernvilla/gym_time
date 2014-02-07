@@ -4,7 +4,6 @@ class WorkoutsController < ApplicationController
     if current_user
       @workouts = Workout.all
       @date = Date.today
-      # @workouts_by_date = @workouts.group_by(&:workout_date)
     else
       redirect_to new_authenticate_path
       flash[:notice] = "Please log in first to see your workouts"

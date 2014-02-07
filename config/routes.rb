@@ -1,5 +1,4 @@
 GymTime::Application.routes.draw do
-
   resources :users, only:[:index, :new, :create]
   resources :workouts
   resources :authenticates, only:[:new, :create]

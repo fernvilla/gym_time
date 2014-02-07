@@ -5,11 +5,14 @@ class AuthenticatesController < ApplicationController
 			flash[:notice] = "You're already logged in as #{current_user.username}"
 		else
 			@user = User.new
+			# Prevent error notice showing up via other pages(i.e. sign-up form error)
+			flash[:notice] = nil
 		end
 	end
 
 	def create
 		user = User.find_by(username: params[:user][:username])
+		# (params.require(:user).permit(:username, :password))
 		if user.authenticated?(params[:user][:password])
 			session[:user_id] = user.id
 			redirect_to workouts_path

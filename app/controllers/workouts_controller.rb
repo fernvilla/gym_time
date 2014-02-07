@@ -1,15 +1,32 @@
 class WorkoutsController < ApplicationController
   def index
-  	@workouts = Workout.all
-    @date = Date.today
+    # Make sure user is logged in before showing index page
+    if current_user
+      @workouts = Workout.all
+      @date = Date.today
+    else
+      redirect_to new_authenticate_path
+      flash[:notice] = "Please log in first to see Calendar"
+    end
   end
 
   def new
-  	@workout = Workout.new
+    # Make sure user is logged to prevent creating workouts
+    if current_user
+      @workout = Workout.new
+    else
+      redirect_to new_authenticate_path
+      flash[:notice] = "Please log in before creating a workout"
+    end
   end
 
   def show
-  	@workout = Workout.find(params[:id])
+    if current_user
+      @workout = Workout.find(params[:id])
+     else
+      redirect_to new_authenticate_path
+      flash[:notice] = "Please log in before viewing a workout"
+    end
   end
 
   def edit

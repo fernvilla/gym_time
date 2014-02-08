@@ -5,10 +5,9 @@
 	<p class="notice"><%= flash[:notice] %><%= flash[:error] %></p>
 	<h1>Log In</h1>
 	<%= form_for @user, {url:"/authenticates", method:"post"} do |user|%><br>
-		<p><%= user.text_field :username, :placeholder => " Enter your username" %></p><br>
-		<p><%= user.password_field :password, :placeholder => " Enter your password" %></p><br>
+		<p><%= user.text_field :username, :placeholder => " Enter your username", :required => true %></p><br>
+		<p><%= user.password_field :password, :placeholder => " Enter your password", :required => true %></p><br>
 		<p><%= user.submit "Log In", :class=>"btn btn-default btn-lg" %></p>
 	<%end%>
-	<br>
 	<p><%= link_to "Back To Main Page", root_path %></p>
 </div>

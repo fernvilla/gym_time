@@ -9,7 +9,7 @@ class UsersController < ApplicationController
       flash[:notice] = "You already have an account. Logged in as #{current_user.username}"
     else
   	 @user = User.new
-     ## Clear notice from reappearing automatically after initial submission error
+     #Clear notice from reappearing automatically after initial submission error
     flash[:notice] = nil
     end
   end
@@ -19,7 +19,7 @@ class UsersController < ApplicationController
     if @user.save
       redirect_to workouts_path, notice: "Thank you for signing up!"
     else
-      flash[:notice] = "There is an error with your submission. Please make sure that the form is completely filled."
+      flash[:notice] = "Account already exists"
       render 'new'
     end
   end

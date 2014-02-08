@@ -1,17 +1,17 @@
 <%= form_for @workout do |f| %>
 	<div>
 		<%= f.label :body_part %><br />
-		<%= f.text_field :body_part %>
+		<%= f.text_field :body_part, :required => true  %>
 	</div>
 	<br>
 	<div>
 		<%= f.label :exercise %><br />
-		<%= f.text_field :exercise %>
+		<%= f.text_field :exercise, :required => true  %>
 	</div>
 	<br>
 	<div>
 			<%= f.label :workout_date%> <br />
-			<%= f.text_field :workout_date, :class=>"datepicker"%>
+			<%= f.text_field :workout_date, :class=>"datepicker", :required => true %>
 	</div>
 	<br>
 	<div><%= f.submit :class=>"btn btn-success" %></div>

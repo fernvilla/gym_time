@@ -1,7 +1,9 @@
 <%= render partial: 'nav' %>
 
 <div class="workout">
-	<h3><%= @workout.body_part + " Workout (#{@workout.workout_date})" %></h3>
+	<h3><%= @workout.body_part + " Workout" %></h3>
+	<h4><%= "(#{@workout.workout_date})" %></h4>
+	<hr>
 	<h3><u><%= "Exercises" %></u></h3>
 	<h4><%= "- " + @workout.exercise %></h4>
 	<br>

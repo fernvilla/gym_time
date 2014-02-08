@@ -2,7 +2,7 @@
 <%= render partial: 'workouts/nav' %>
 
 <div class="workout">
-	<p class="notice"><%= flash[:notice] %><%= flash[:error] %></p>
+	<p class="notice"><%= flash[:notice] %></p>
 	<h1>Log In</h1>
 	<%= form_for @user, {url:"/authenticates", method:"post"} do |user|%><br>
 		<p><%= user.text_field :username, :placeholder => " Enter your username", :required => true %></p><br>

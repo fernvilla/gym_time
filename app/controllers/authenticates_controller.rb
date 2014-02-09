@@ -17,7 +17,7 @@ class AuthenticatesController < ApplicationController
 			redirect_to workouts_path
 		else
 			redirect_to new_authenticate_path
-			flash[:notice] = "Email or password is invalid"
+			flash[:notice] = "User name or password is invalid"
   	end
 	end
 

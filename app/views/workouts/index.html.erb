@@ -1,14 +1,44 @@
 <%= render partial: 'nav' %>
+
+<div id ="upcoming">
+	<table>
+		<tr>
+		    <th>Today's Workout</th>
+		</tr>
+	<tr>
+		<td>
+		<!-- Workouts sorted by date in workouts controller -->
+		<% time = Time.now.strftime("%Y-%m-%d") %>
+		<% @workouts.each do |workout| %>
+			<% if workout.workout_date == time%>
+					<p><%= workout.body_part + " Workout" %></p>
+					<hr>
+					<p><%= workout.exercise %>
+					<% break %>
+			<% else %>
+				<%= "No Workout Today. Get Some Rest!" %>	
+				<% break %>
+			<% end %>
+		<% end %>
+		</td>
+	</tr>
+	</table>
+
+</div>
+
+<!--Calendar ID calls the jquery calendar to render-->
 <div id="calendar">
- <p><%= link_to "Create A New Workout", new_workout_path, :class=>"btn btn-primary btn-xs" %></p>
-	 <p class="notice"><%= flash[:notice] %><%= flash[:error] %></p>
-	
+  <br>
+  <p><%= link_to "Create A New Workout", new_workout_path, :class=>"btn btn-primary btn-xs" %></p>
+  <p class="notice"><%= flash[:notice] %></p>
 </div> 
 
 <script> $(document).ready(function() {
     $('#calendar').fullCalendar({
-        aspectRatio: 1.8,
-        events: 'workouts.json'
+        aspectRatio: 1.9,
+        //index.jason.jbuilder file will parse json data
+        events: 'workouts.json',
+        eventColor: '#000',
     })
 });
 </script>

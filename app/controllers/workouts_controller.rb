@@ -2,8 +2,8 @@ class WorkoutsController < ApplicationController
   def index
     # Make sure user is logged in before showing index page
     if current_user
-      @workouts = Workout.all
-      @date = Date.today
+      # order workouts in ascending order for 'today's workout' to function properly
+      @workouts = Workout.all.order_by(:workout_date.asc)
     else
       redirect_to new_authenticate_path
       flash[:notice] = "Please log in first to see your workouts"

@@ -1,8 +1,4 @@
 class UsersController < ApplicationController
-  def index
-  	@users = User.all
-  end
-
   def new
     if current_user
       redirect_to workouts_path
@@ -17,6 +13,8 @@ class UsersController < ApplicationController
   def create
     @user = User.new(params.require(:user).permit(:username, :password))
     if @user.save
+      # Set current_user session. Needed before user can be redirected to workouts page
+      session[:user_id] = @user.id 
       redirect_to workouts_path, notice: "Thank you for signing up!"
     else
       flash[:notice] = "Account already exists"

@@ -25,6 +25,7 @@ class AuthenticatesController < ApplicationController
 		if current_user
 			session[:user_id] = nil
 			redirect_to new_authenticate_path
+			flash[:notice] = " You have successfully logged off"
 		else
 			redirect_to new_authenticate_path
 			flash[:notice] = " You are not currently logged in"

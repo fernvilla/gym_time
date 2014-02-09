@@ -3,27 +3,31 @@
 <div id ="upcoming">
 	<table>
 		<tr>
-		    <th>Today's Workout</th>
+			<th>Today's Workout</th>
 		</tr>
-	<tr>
-		<td>
-		<!-- Workouts sorted by date in workouts controller -->
-		<% time = Time.now.strftime("%Y-%m-%d") %>
-		<% @workouts.each do |workout| %>
-			<% if workout.workout_date == time%>
-					<p><%= workout.body_part + " Workout" %></p>
-					<hr>
-					<p><%= workout.exercise %>
-					<% break %>
-			<% else %>
-				<%= "No Workout Today. Get Some Rest!" %>	
-				<% break %>
-			<% end %>
-		<% end %>
-		</td>
-	</tr>
+		<tr>
+			<td>
+				<!-- Workouts sorted by date in workouts controller -->
+				<% time = Time.now.strftime("%Y-%m-%d") %>
+				<% @workouts.each do |workout| %>
+					<% if workout.workout_date == time%>
+						<p>BODY PART:</p>
+						<%= workout.body_part %>
+						<hr>
+						<p>EXERCISES:</p>
+						<%= workout.exercise %>
+						<br>
+						<h6><%= link_to "(View workout page)", workout %></h6>
+						<% break %>
+					<% else %>
+						<p><%= "No Workout Scheduled For Today." %></p>
+						<p><%= "Rest Up And Get Ready For The Next One!" %></p>	
+						<% break %>
+					<% end %>
+				<% end %>
+			</td>
+		</tr>
 	</table>
-
 </div>
 
 <!--Calendar ID calls the jquery calendar to render-->
@@ -38,7 +42,7 @@
         aspectRatio: 1.9,
         //index.jason.jbuilder file will parse json data
         events: 'workouts.json',
-        eventColor: '#000',
+        eventColor: '#1f2a39',
     })
 });
 </script>

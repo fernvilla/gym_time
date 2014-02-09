@@ -5,8 +5,15 @@
     </div>
     <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">    
       <ul class="nav navbar-nav navbar-right">
-        <li><%= link_to current_user ? "Logged in as: #{current_user.username}" : "(not logged in)", workouts_path %></li>
-        <li><%= link_to 'Logout', authenticates_path, {method: :delete} %></li>
+        <li><%= link_to "Workout Log", workouts_path %></li>
+        <li><%= link_to "Calendar", workouts_path %></li>
+               
+        <li class="dropdown">
+          <a class="dropdown-toggle" data-toggle="dropdown"><%=current_user ? "Logged in: #{current_user.username}" : "(not logged in)" %> <b class="caret"></b></a>
+          <ul class="dropdown-menu">
+            <li><%= link_to 'Logout', authenticates_path, {method: :delete} %></li>
+          </ul>
+        </li>
       </ul>
     </div>
   </div>

@@ -1,5 +1,5 @@
 GymTime::Application.routes.draw do
-  resources :users, only:[:index, :new, :create]
+  resources :users, only:[:new, :create]
   resources :workouts
   resources :authenticates, only:[:new, :create]
   delete "authenticates" => "authenticates#destroy"

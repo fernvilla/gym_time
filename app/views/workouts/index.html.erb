@@ -10,21 +10,40 @@
 				<!-- Workouts sorted by date in workouts controller -->
 				<% time = Time.now.strftime("%Y-%m-%d") %>
 				<% @workouts.each do |workout| %>
-					<% if workout.workout_date == time%>
-						<p>BODY PART:</p>
-						<%= workout.body_part %>
-						<hr>
-						<p>EXERCISES:</p>
-						<%= workout.exercise %>
-						<br>
-						<h6><%= link_to "(View workout page)", workout %></h6>
-						<% break %>
-					<% else %>
-						<p><%= "No Workout Scheduled For Today." %></p>
-						<p><%= "Rest Up And Get Ready For The Next One!" %></p>	
-						<% break %>
+				<!-- Check first to make sure that loop doesnt pick up previous days -->
+					<% if workout.workout_date >= time %>
+						<% if workout.workout_date == time%>
+							<p>BODY PART:</p>
+							<%= workout.body_part %>
+							<hr>
+							<p>EXERCISES:</p>
+							<%= workout.exercise %>
+							<br>
+							<h6><%= link_to "(View workout page)", workout %></h6>
+							<% break %>
+						<% else %>
+							<p><%= "No Workout Scheduled For Today." %></p>
+							<p><%= "Rest Up And Get Ready For The Next One!" %></p>	
+							<% break %>
+						<% end %>
 					<% end %>
 				<% end %>
+			</td>
+		</tr>
+	</table>
+	<br>
+	<br>
+	<table>
+		<tr>
+			<th>Recent Workout Logs</th>
+		</tr>
+		<tr>
+			<td>
+				<br>
+				<br>
+				<br>
+				<br>
+				<br>
 			</td>
 		</tr>
 	</table>
@@ -33,7 +52,7 @@
 <!--Calendar ID calls the jquery calendar to render-->
 <div id="calendar">
   <br>
-  <p><%= link_to "Create A New Workout", new_workout_path, :class=>"btn btn-primary btn-xs" %></p>
+  <%= link_to "Create A New Workout", new_workout_path, :class=>"btn btn-primary btn-xs" %>
   <p class="notice"><%= flash[:notice] %></p>
 </div> 
 
@@ -42,7 +61,7 @@
         aspectRatio: 1.9,
         //index.jason.jbuilder file will parse json data
         events: 'workouts.json',
-        eventColor: '#1f2a39',
+        eventColor: '#000056',
     })
 });
 </script>

@@ -8,8 +8,9 @@ class User
   field :salt, type: String
   field :hashed_password, type: String
 
-  validates :username, uniqueness: true, presence: true
-  validates :password, presence: true
+
+  validates :username, :presence => true, :uniqueness => true
+  validates :password, :presence => true
   
   def authenticated? pwd
   	self.hashed_password == BCrypt::Engine.hash_secret(pwd, self.salt)

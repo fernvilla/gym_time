@@ -1,9 +1,11 @@
 class WorkoutsController < ApplicationController
   def index
-    # Make sure user is logged in before showing index page
+    # Make sure user is logged in (applies to other methods also)
     if current_user
       # order workouts in ascending order for 'today's workout' to function properly
       @workouts = Workout.all.order_by(:workout_date.asc)
+      # Only show assigned users workots
+      @workouts = current_user.workouts
     else
       redirect_to new_authenticate_path
       flash[:notice] = "Please log in first to see your workouts"
@@ -11,7 +13,6 @@ class WorkoutsController < ApplicationController
   end
 
   def new
-    # Make sure user is logged to prevent creating workouts
     if current_user
       @workout = Workout.new
     else
@@ -21,7 +22,6 @@ class WorkoutsController < ApplicationController
   end
 
   def show
-    # Make sure user is logged to prevent seeing workouts
     if current_user
       @workout = Workout.find(params[:id])
      else
@@ -36,6 +36,8 @@ class WorkoutsController < ApplicationController
 
   def create
   	@workout = Workout.new(workout_params)
+    # Assign workout to current user
+    @workout.user = current_user 
 
   	if @workout.save
   		flash[:notice] = "Successfully Created A Workout!"

@@ -4,6 +4,8 @@ class User
 	include Mongoid::Document
 	attr_accessor :password
 
+  has_many :workouts
+
   field :username, type: String
   field :salt, type: String
   field :hashed_password, type: String

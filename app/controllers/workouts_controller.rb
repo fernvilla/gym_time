@@ -2,10 +2,9 @@ class WorkoutsController < ApplicationController
   def index
     # Make sure user is logged in (applies to other methods also)
     if current_user
-      # order workouts in ascending order for 'today's workout' to function properly
-      @workouts = Workout.all.order_by(:workout_date.asc)
-      # Only show assigned users workots
-      @workouts = current_user.workouts
+      @workouts = Workout.all
+      # Only show assigned users workots and order them by earliest date
+      @workouts = current_user.workouts.order_by(:workout_date.asc)
     else
       redirect_to new_authenticate_path
       flash[:notice] = "Please log in first to see your workouts"

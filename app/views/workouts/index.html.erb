@@ -1,4 +1,4 @@
-<%= render partial: 'nav' %>
+
 
 <div id ="upcoming">
 	<table>
@@ -15,11 +15,10 @@
 						<% if workout.workout_date == time%>
 							<p>BODY PART:</p>
 							<%= workout.body_part %>
-							<hr>
+							<p>__________________</p>
 							<p>EXERCISES:</p>
 							<%= workout.exercise %>
-							<br>
-							<h6><%= link_to "(View workout page)", workout %></h6>
+							<h6><%= link_to "(view workout page)", workout %></h6>
 							<% break %>
 						<% else %>
 							<p><%= "No Workout Scheduled For Today." %></p>
@@ -58,7 +57,7 @@
 
 <script> $(document).ready(function() {
     $('#calendar').fullCalendar({
-        aspectRatio: 1.9,
+        aspectRatio: 1.8,
         //index.jason.jbuilder file will parse json data
         events: 'workouts.json',
         eventColor: '#000056',

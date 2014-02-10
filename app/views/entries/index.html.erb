@@ -1,4 +1,12 @@
-<h1>Entries</h1>
-<% @entries.each do |entry| %>
-<%= entry.title %>
-<% end %>
+
+<div class="entry">
+	<h3>Workout Journal</h3>
+	<div class="entries">
+		<% @entries.each do |entry| %>
+			<%= link_to entry.title, entry %>
+			<%= "(#{entry.entry_date})" %>
+		<% end %>
+	</div>
+	<br>
+  <%= link_to "Add New Journal Entry", new_entry_path, :class=>"btn btn-primary btn-xs" %>
+</div>

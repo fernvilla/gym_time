@@ -3,7 +3,7 @@ class WorkoutsController < ApplicationController
     # Make sure user is logged in (applies to other methods also)
     if current_user
       @workouts = Workout.all
-      # Only show assigned users workots and order them by earliest date
+      # Only show assigned users workots and order them by earliest date for json
       @workouts = current_user.workouts.order_by(:workout_date.asc)
     else
       redirect_to new_authenticate_path

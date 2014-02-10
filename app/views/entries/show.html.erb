@@ -1,2 +1,10 @@
-<h1>Entries#show</h1>
-<p>Find me in app/views/entries/show.html.erb</p>
+<div class="entry">
+	<h3><%= @entry.title %></h3>
+	<h4><%= "(#{@entry.entry_date})" %></h4>
+	<hr>
+	<h3><u><%= "Journal Entry" %></u></h3>
+	<h4><%= @entry.content %></h4>
+	<br>
+	<span class="btn btn-success"><%= link_to "Edit Entry", edit_entry_path%></span>
+	<span class="btn btn-default"><%= link_to "Go Back", entries_path%></span>
+</div>

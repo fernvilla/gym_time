@@ -1,2 +1,4 @@
-<h1>Entries#index</h1>
-<p>Find me in app/views/entries/index.html.erb</p>
+<h1>Entries</h1>
+<% @entries.each do |entry| %>
+<%= entry.title %>
+<% end %>

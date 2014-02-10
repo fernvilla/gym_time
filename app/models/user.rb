@@ -5,6 +5,7 @@ class User
 	attr_accessor :password
 
   has_many :workouts
+  has_many :entries
 
   field :username, type: String
   field :salt, type: String

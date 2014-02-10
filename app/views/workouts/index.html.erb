@@ -55,10 +55,17 @@
 
 <script> $(document).ready(function() {
     $('#calendar').fullCalendar({
-        aspectRatio: 1.8,
-        //index.jason.jbuilder file will parse json data
-        events: 'workouts.json',
-        eventColor: '#000056',
+      aspectRatio: 1.8,
+      //index.jason.jbuilder file will parse json data
+      eventSources: [
+        {
+            url: 'workouts.json', 
+            color: '#000056', 
+        },
+        {
+            url: 'entries.json', 
+            color: '#575757', 
+        }]
     })
 });
 </script>

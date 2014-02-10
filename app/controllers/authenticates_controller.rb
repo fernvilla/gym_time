@@ -5,19 +5,18 @@ class AuthenticatesController < ApplicationController
 			flash[:notice] = "You're already logged in as #{current_user.username}"
 		else
 			@user = User.new
-			# Prevent error notice showing up via other pages(i.e. sign-up form error)
-			# flash[:notice] = nil
 		end
 	end
 
 	def create
 		user = User.find_by(username: params[:user][:username])
-		if user.authenticated?(params[:user][:password])
+		# Mongoid.yml file must be set to 'raise_not_found_error: false' to return nil if no user found
+		if (user != nil) && (user.authenticated?(params[:user][:password]))
 			session[:user_id] = user.id
 			redirect_to workouts_path
 		else
 			redirect_to new_authenticate_path
-			flash[:notice] = "User name or password is invalid"
+			flash[:notice] = "User name and/or password is invalid"
   	end
 	end
 

@@ -3,6 +3,7 @@ GymTime::Application.routes.draw do
   resources :workouts
   resources :authenticates, only:[:new, :create]
   delete "authenticates" => "authenticates#destroy"
+  resources :entries
   
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".

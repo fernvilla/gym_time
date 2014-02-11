@@ -2,7 +2,7 @@ class WorkoutsController < ApplicationController
   def index
     # Make sure user is logged in (applies to other methods also)
     if current_user
-      @workouts = Workout.all
+      # @workouts = Workout.all
       # Only show assigned users workots and order them by earliest date for json
       @workouts = current_user.workouts.order_by(:workout_date.asc)
     else
@@ -67,6 +67,6 @@ class WorkoutsController < ApplicationController
 	private
 
 	def workout_params
-		params.require(:workout).permit(:body_part, :exercise, :workout_date)	
+		params.require(:workout).permit(:body_part, :exercise, :workout_date, exercise_ids: [])	
 	end
 end

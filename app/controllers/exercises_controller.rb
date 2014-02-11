@@ -1,7 +1,8 @@
 class ExercisesController < ApplicationController
   def index
   	if current_user
-      @exercises = Exercise.all
+      # @exercises = Exercise.all
+      @exercises = current_user.exercises.order_by(:name.asc)
     else
       redirect_to new_authenticate_path
       flash[:notice] = "Please log in first to see your exercises"
@@ -54,7 +55,7 @@ class ExercisesController < ApplicationController
 	end
 
 	def destroy
-		@exercise = exercise.find(params[:id])
+		@exercise = Exercise.find(params[:id])
 		@exercise.destroy
 		flash[:notice] = "Successfully Deleted Your Exercise!"
 		redirect_to action: 'index'
@@ -63,7 +64,6 @@ class ExercisesController < ApplicationController
 private
 
 	def exercise_params
-		params.require(:exercise).permit(:name)	
+		params.require(:exercise).permit(:name, :link)	
 	end
-
 end

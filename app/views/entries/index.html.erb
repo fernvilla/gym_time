@@ -1,6 +1,7 @@
 
 <div class="entry">
 	<h3>Workout Journal</h3>
+	<p class="notice"><%= flash[:notice] %></p>
 	<div class="entries">
 		<% @entries.each do |entry| %>
 			<p>
@@ -9,7 +10,7 @@
 			</p>
 		<% end %>
 	</div>
-	<br>
+	<br><br>
   <%= link_to "Add New Journal Entry", new_entry_path, :class=>"btn btn-primary btn-xs", :id=>"journal" %>
   <br>
   <%= link_to "Back to Workouts Calendar", workouts_path %>

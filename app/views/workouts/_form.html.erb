@@ -14,5 +14,10 @@
 			<%= f.text_field :workout_date, :class=>"datepicker", :required => true %>
 	</div>
 	<br>
+
+	<fieldset>
+  <legend> Choose Exercises</legend>
+  <%= f.collection_check_boxes :exercise_ids, Exercise.all, :id, :name %>
+</fieldset>
 	<div><%= f.submit :class=>"btn btn-success" %></div>
 <% end %>

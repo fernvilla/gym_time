@@ -6,6 +6,7 @@ class User
 
   has_many :workouts
   has_many :entries
+  has_many :exercises
 
   field :username, type: String
   field :salt, type: String

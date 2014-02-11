@@ -1,7 +1,7 @@
 class EntriesController < ApplicationController
   def index
     if current_user
-      @entries = Entry.all
+      # @entries = Entry.all
       @entries = current_user.entries.order_by(:entry_date.desc)
     else
       redirect_to new_authenticate_path
@@ -55,7 +55,7 @@ class EntriesController < ApplicationController
 	end
 
 	def destroy
-		@entry = entry.find(params[:id])
+		@entry = Entry.find(params[:id])
 		@entry.destroy
 		flash[:notice] = "Successfully Deleted Your Entry!"
 		redirect_to action: 'index'

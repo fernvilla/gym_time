@@ -1,0 +1,15 @@
+<div class="exercise">
+	<h3>Manage Exercises</h3>
+	<div class="entries">
+		<% @exercises.each do |exercise| %>
+			<p>
+			<%= link_to exercise.name, exercise %>
+			<%= "(#{exercise.name})" %>
+			</p>
+		<% end %>
+	</div>
+	<br>
+  <%= link_to "Add New Exercise", new_exercise_path, :class=>"btn btn-primary btn-xs", :id=>"journal" %>
+  <br>
+  <%= link_to "Back to Workouts Calendar", workouts_path %>
+</div>

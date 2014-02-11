@@ -30,12 +30,13 @@
 	</table>
 	<br>
 	<br>
-	<table>
+	<!-- <table>
 		<tr>
 			<th>Recent Journal Entries</th>
 		</tr>
 		<tr>
 			<td>
+
 				<br>
 				<br>
 				<br>
@@ -43,13 +44,15 @@
 				<br>
 			</td>
 		</tr>
-	</table>
+	</table> -->
 </div>
 
 <!--Calendar ID calls the jquery calendar to render-->
 <div id="calendar">
   <br>
-  <%= link_to "Create A New Workout", new_workout_path, :class=>"btn btn-primary btn-xs" %>
+  <%= link_to "Add New Workout", new_workout_path, :class=>"btn btn-primary btn-xs" %>
+  &nbsp;
+  <%= link_to "Add Journal Entry", new_entry_path, :class=> "btn btn-default btn-xs", :id=>"journal" %>
   <p class="notice"><%= flash[:notice] %></p>
 </div> 
 

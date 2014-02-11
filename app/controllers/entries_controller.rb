@@ -33,7 +33,6 @@ class EntriesController < ApplicationController
 
   def create
   	@entry = Entry.new(entry_params)
-    # Assign entry to current user
     @entry.user = current_user 
 
   	if @entry.save

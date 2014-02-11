@@ -109,6 +109,13 @@ a {
 	color: #FFF;
 }
 
+#journal{
+	background-color: #4b4b4b;
+	color: #FFF;
+	box-shadow: 1px 1px 1px #000;
+	border: none;
+}
+
 #upcoming {
   float: left;
   margin: 30px 40px;
@@ -127,14 +134,14 @@ a {
   	color: #FFF;
   	text-align: center;
   	border: none;
-  	font-size: 14px;
+  	font-size: 15px;
   	padding: 8px 12px;
   }
 
   td {
   	height: 100%;
   	width: 100px;	
-  	font-size: 13px;
+  	font-size: 14px;
   	border: 1px solid #000;
   	padding: 7px 10px;
   	color: #000056;

@@ -3,10 +3,14 @@
 	<h3>Workout Journal</h3>
 	<div class="entries">
 		<% @entries.each do |entry| %>
+			<p>
 			<%= link_to entry.title, entry %>
 			<%= "(#{entry.entry_date})" %>
+			</p>
 		<% end %>
 	</div>
 	<br>
-  <%= link_to "Add New Journal Entry", new_entry_path, :class=>"btn btn-primary btn-xs" %>
+  <%= link_to "Add New Journal Entry", new_entry_path, :class=>"btn btn-primary btn-xs", :id=>"journal" %>
+  <br>
+  <%= link_to "Back to Workouts Calendar", workouts_path %>
 </div>

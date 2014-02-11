@@ -15,8 +15,10 @@
     </div>
     <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">    
       <ul class="nav navbar-nav navbar-right">
-        <li><%= link_to "Workout Journal", entries_path %></li>
         <li><%= link_to "Calendar", workouts_path %></li>
+        <li><%= link_to "Journal", entries_path %></li>
+        <li><%= link_to "Manage Exercises", exercises_path %></li>
+
                
         <li class="dropdown">
           <a class="dropdown-toggle" data-toggle="dropdown"><%=current_user ? "Logged in: #{current_user.username}" : "(not logged in)" %> <b class="caret"></b></a>

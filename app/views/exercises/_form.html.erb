@@ -1,12 +1,12 @@
 <%= form_for @exercise do |f| %>
-	<div><%= f.label :name %></div>
+	<div><%= f.label "Exercise Name" %></div>
 	<div><%= f.text_field :name, :required => true %></div>
 	<br>
-	<div><%= f.label :link %></div>
+	<div><%= f.label "External Exercise Link" %></div>
 	<div><%= f.text_field :link, :size=>"70" %></div>
 	<br>
 	<div><%= f.label "YouTube Video ID" %></div>
-	<div><%= f.text_field :video, :size=>"15" %></div><br>
+	<div><%= f.text_field :video, :size=>"15" %></div>
+	<br><br>
 	<div><%= f.submit :class=>"btn btn-success" %></div>
-	<br>
 <% end %>

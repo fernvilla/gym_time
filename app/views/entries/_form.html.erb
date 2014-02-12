@@ -11,7 +11,38 @@
 	<br>
 	<div>
 			<%= f.label "Entry"%> <br />
-			<%= f.text_area :content, :required => true, :cols => "70", :rows => "12", :class=>"textbox" %>
+			<%= f.text_area :content, :required => true, :cols => "100", :rows => "5", :class=>"textbox" %>
+	</div>
+	<br>
+	<div>
+		<table>
+			<th><%= f.label :exercise %></th>
+			<th><%= f.label :sets %></th>
+			<th><%= f.label :reps %></th>
+			<tr>
+				<td><%= f.text_field :exercise  %></td>
+				<td><%= f.text_field :sets  %></td>
+				<td><%= f.text_field :reps %></td>
+			</tr>
+
+			<th><%= f.label :exercise_two %></th>
+			<th><%= f.label :sets_two %></th>
+			<th><%= f.label :reps_two %></th>
+			<tr>
+				<td><%= f.text_field :exercise_two  %></td>
+				<td><%= f.text_field :sets_two  %></td>
+				<td><%= f.text_field :reps_two %></td>
+			</tr>
+
+			<th><%= f.label :exercise_three %></th>
+			<th><%= f.label :sets_three  %></th>
+			<th><%= f.label :reps_three  %></th>
+			<tr>
+				<td><%= f.text_field :exercise_three  %></td>
+				<td><%= f.text_field :sets_three   %></td>
+				<td><%= f.text_field :reps_three  %></td>
+			</tr>
+		</table>
 	</div>
 	<br>
 	<div><%= f.submit :class=>"btn btn-success" %></div>

@@ -9,6 +9,5 @@ class Workout
   field :workout_date, type: String
 
   validates :body_part, :presence => true
-  # validates :exercise, :presence => true
   validates :workout_date, :presence => true
 end

@@ -10,8 +10,9 @@
 	</div>
 	<br>
 	<fieldset>
-	  Select Exercise(s)
-	  <p><%= f.collection_check_boxes :exercise_ids, Exercise.all, :id, :name, :class=>"options" %></p>
+	  <p>Select Exercise(s):</p>
+	  <!-- current_user should be added before exercises.all to grab only current users' exercises -->
+	  <p class="options"><%= f.collection_check_boxes :exercise_ids, current_user.exercises.all, :id, :name %></p>
 	</fieldset>
 	<div><%= f.submit :class=>"btn btn-success" %></div>
 <% end %>

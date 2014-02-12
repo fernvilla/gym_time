@@ -4,7 +4,7 @@
 
 .entry {
 	margin: 30px auto;
-	width: 50%;
+	width: 60%;
 	height: 600px;
 	background-color: #000;	
 	color: #FFF;
@@ -13,6 +13,7 @@
 	box-shadow: 3px 3px 2px #000;
 	border-radius: 10px;
 	border: 1px solid #777777;
+	font-size: 12px;
 }
 
 .textbox {
@@ -27,4 +28,30 @@
 	a{
 		color: #FFF;
 	}
+}
+table {
+	margin: 0 auto;
+}
+
+#log {
+	margin: 0 auto;
+  color: #000;
+  text-align: center;
+
+  th {
+  	background-color: #000056;
+  	color: #FFF;
+  	text-align: center;
+  	border: none;
+  	font-size: 15px;
+  	padding: 8px 12px;
+  }
+
+  td {
+  	background-color: #FFF;
+  	font-size: 14px;
+  	border: 1px solid #000056;
+  	padding: 7px 10px;
+  	color: #000056;
+  }
 }

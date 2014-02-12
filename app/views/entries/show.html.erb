@@ -6,25 +6,29 @@
 	<h4><%= @entry.content %></h4>
 	<hr>
 	<h4>Workout Log</h4>
-
+	<br>
 	<table id="log">
 		<th>Exercise</th>
 		<th># Of Sets</th>
 		<th># Of Repetitions</th>
+		<th>Lbs.</th>
 		<tr>
 			<td><%= @entry.exercise %></td>
 			<td><%= @entry.sets %></td>
 			<td><%= @entry.reps %></td>
+			<td><%= @entry.lbs %></td>
 		</tr>
 		<tr>
 			<td><%= @entry.exercise_two %></td>
 			<td><%= @entry.sets_two %></td>
 			<td><%= @entry.reps_two %></td>
+			<td><%= @entry.lbs_two %></td>
 		</tr>
 		<tr>
 			<td><%= @entry.exercise_three %></td>
 			<td><%= @entry.sets_three %></td>
 			<td><%= @entry.reps_three %></td>
+			<td><%= @entry.lbs_two %></td>
 		</tr>
 	</table>
 	<br>

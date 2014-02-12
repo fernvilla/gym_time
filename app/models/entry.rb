@@ -16,6 +16,9 @@ class Entry
   field :reps, type: Integer
   field :reps_two, type: Integer
   field :reps_three, type: Integer
+  field :lbs, type: String
+  field :lbs_two, type: String
+  field :lbs_three, type: String
 
 
   validates :title, :presence => true

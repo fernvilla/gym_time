@@ -29,6 +29,7 @@
 		color: #FFF;
 	}
 }
+
 table {
 	margin: 0 auto;
 }
@@ -39,18 +40,19 @@ table {
   text-align: center;
 
   th {
-  	background-color: #000056;
+  	background-color: #888888;
   	color: #FFF;
   	text-align: center;
   	border: none;
   	font-size: 15px;
   	padding: 8px 12px;
+  	border: 1px solid #000;
   }
 
   td {
   	background-color: #FFF;
   	font-size: 14px;
-  	border: 1px solid #000056;
+  	border: 1px solid #888888;
   	padding: 7px 10px;
   	color: #000056;
   }

@@ -59,7 +59,7 @@ input {
 }
 
 .workout {
-	margin: 100px auto;
+	margin: 50px auto;
 	width: 40%;
 	height: 100%;
 	background-color: #000;	
@@ -100,7 +100,13 @@ a {
 }
 
 .btn-primary:hover {
-	background-color: #777777;
+	background-color: #4b4b4b;
+	border: none;
+	box-shadow: 1px 1px 3px #000;
+}
+
+#journal:hover {
+	background-color: #000056;
 	border: none;
 	box-shadow: 1px 1px 3px #000;
 }
@@ -118,7 +124,7 @@ a {
 
 #upcoming {
   float: left;
-  margin: 75px 50px;
+  margin: 40px 50px;
 }
 
 #upcoming > table {
@@ -154,7 +160,18 @@ th {
 }
 
 .options * {
-	padding-right: 20px;
+	padding-right: 15px;
 	padding-left: 5px;
-	margin-bottom: 20px;
+	display: inline;
+}
+
+.exercises {
+	margin: 30px auto;
+	width: 80%;
+	height: 100%;
+	color: #FFF;
+	text-align: center;
+	padding: 10px;
+	border-radius: 10px;
+	border: 1px solid #777777;
 }

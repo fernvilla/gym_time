@@ -6,6 +6,7 @@ class Exercise
 
   field :name, type: String
   field :link, type: String
+  field :video, type: String
 
   validates :name, presence: true
 end

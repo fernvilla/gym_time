@@ -2,10 +2,10 @@
 	<h3><%= @exercise.name %></h3>
 	<hr>
 	<h4>Link For More Exercise Info:</h4>
-
 	<%= link_to nil, "#{@exercise.link}", :target => "_blank" %>
-	
-	<div class="entries"></div>
+	<h4>YouTube Video:</h4>
+	<iframe width="560" height="315" src="<%= "http://www.youtube.com/embed/"+ @exercise.video%>" frameborder="1" allowfullscreen></iframe>
+	<br><br>
 	<span class="btn btn-success"><%= link_to "Edit Exercise", edit_exercise_path%></span>
 	<span class="btn btn-default"><%= link_to "Go Back", exercises_path%></span>
 </div>

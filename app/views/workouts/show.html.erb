@@ -2,8 +2,9 @@
 	<h3><%= @workout.body_part + " Workout" %></h3>
 	<h4><%= "(#{@workout.workout_date})" %></h4>
 	<hr>
-	<h3><u><%= "Exercises" %></u></h3>
-	<h4><%= "- " + @workout.exercise %></h4>
+		<%@workout.exercises.each do |exercise|%>
+		<h4><%= link_to exercise.name, exercise %></h4>
+		<% end %>
 	<br>
 	<span class="btn btn-success"><%= link_to "Edit Workout", edit_workout_path%></span>
 	<span class="btn btn-default"><%= link_to "Go Back", workouts_path%></span>

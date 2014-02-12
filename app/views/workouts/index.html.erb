@@ -11,7 +11,7 @@
 				<!-- Check first to make sure that loop doesnt pick up previous days -->
 					<% if workout.workout_date >= time %>
 						<% if workout.workout_date == time%>
-							<p>BODY PART:</p>
+							<p>BODY PART(S):</p>
 							<%= workout.body_part %>
 							<p>__________________</p>
 							<p>EXERCISES:</p>
@@ -30,21 +30,6 @@
 	</table>
 	<br>
 	<br>
-	<!-- <table>
-		<tr>
-			<th>Recent Journal Entries</th>
-		</tr>
-		<tr>
-			<td>
-
-				<br>
-				<br>
-				<br>
-				<br>
-				<br>
-			</td>
-		</tr>
-	</table> -->
 </div>
 
 <!--Calendar ID calls the jquery calendar to render-->

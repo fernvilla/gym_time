@@ -12,10 +12,10 @@
 					<% if workout.workout_date >= time %>
 						<% if workout.workout_date == time%>
 							<%= workout.workout_date %>
-							<p>__________________</p>
+							<hr>
 							<p>BODY PART(S):</p>
 							<%= workout.body_part %>
-							<p>__________________</p>
+							<hr>
 							<p>EXERCISE(S):</p>
 							<% workout.exercises.each do |exercise|%>
 							<p><%= exercise.name%></p>

@@ -124,16 +124,17 @@ a {
 
 #upcoming {
   float: left;
-  margin: 40px 50px;
+  margin: 30px 50px;
 }
 
 #upcoming > table {
   background-color: #FFF; 
   box-shadow: 2px 2px 5px #000; 
-  width: 225px; 
+  width: 250px; 
   height: 100%;
   color: #000;
   text-align: center;
+  margin-bottom: 20px;
 
   th {
   	background-color: #000056;
@@ -141,15 +142,15 @@ a {
   	text-align: center;
   	border: none;
   	font-size: 15px;
-  	padding: 8px 12px;
+  	padding: 8px 15px;
   }
 
   td {
   	height: 100%;
-  	width: 100px;	
+  	width: 100%;	
   	font-size: 14px;
   	border: 1px solid #000056;
-  	padding: 7px 10px;
+  	padding: 15px;
   	color: #000056;
   }
 }

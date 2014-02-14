@@ -14,10 +14,18 @@ html, body {
 	background: #000;
 	color: #FFF;
 	border: none;
-	height: 40px;
-	padding: 0 10px 0 65px;
+	height: 50px;
+	padding: 0 10px 0 90px;
 	box-shadow: 2px 2px 2px #000;
-	border-radius: 0;
+}
+
+.navbar-brand {
+	padding: 0px;
+}
+
+.navbar-brand > img {
+	height: 45px;
+	width: 150px;
 }
 
 .navbar .navbar-header > p >a {
@@ -28,13 +36,14 @@ html, body {
 
 .navbar .nav > li > a {
 	color: #FFF;
-	font-size: 12px;
+	font-size: 12px;	
 	text-decoration: none;
 }
 
 .navbar .nav > li > a:hover {
 	color: #777777;
 }
+
 
 .dropdown-menu {
 	background-color: #000;	

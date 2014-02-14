@@ -3,9 +3,9 @@
 // You can use Sass (SCSS) here: http://sass-lang.com/
 
 .exercise {
-	margin: 30px auto;
-	width: 50%;
-	height: 600px;
+	margin: 0px auto;
+	width: 80%;
+	height: 630px;
 	background-color: #000;	
 	color: #FFF;
 	text-align: center;
@@ -20,6 +20,34 @@
 	height: 20px;
 }
 
-h4 {
-	text-decoration: underline;
+.showexercise {
+	margin: 10px auto;
+	height: 200px;
+	width: 20%;
+	float: left;
+	border: 1px solid #777777;
+	text-align: center;
+}
+
+.showexercise>h4 {
+	color: #000;
+	background-color: white;
+}
+
+.show {
+	margin: 0 auto;
+	min-height: 450px;
+}
+
+.newexercise {
+	margin: 50px auto;
+	width: 45%;
+	height: 100%;
+	background-color: #000;	
+	color: #FFF;
+	text-align: center;
+	padding: 0 25px 10px 25px;
+	box-shadow: 3px 3px 2px #000;
+	border-radius: 10px;
+	border: 1px solid #777777;
 }

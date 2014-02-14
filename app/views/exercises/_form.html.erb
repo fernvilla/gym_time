@@ -3,7 +3,7 @@
 	<div><%= f.text_field :name, :required => true %></div>
 	<br>
 	<div><%= f.label "Body Part" %></div>
-	<div id="select"><%= f.select :part, options_for_select(["Abs", "Back", "Biceps", "Calves", "Chest", "Forearms", "Legs", "Triceps", "Shoulders"]), :required => true%></div>
+	<div id="select"><%= f.select :part, options_for_select(["Abs", "Lower Back", "Upper Back", "Biceps", "Calves", "Chest", "Forearms", "Legs", "Triceps", "Shoulders"]), :required => true%></div>
 	<br>
 	<div><%= f.label "External Exercise Link" %></div>
 	<div><%= f.text_field :link, :size=>"70" %></div>

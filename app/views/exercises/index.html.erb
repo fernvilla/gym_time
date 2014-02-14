@@ -1,74 +1,101 @@
 <div class="exercise">
 	<h3>Manage Exercises</h3>
 	<p class="notice"><%= flash[:notice] %></p>
-	<div class="entries">
+	<div class="show">
 	
-		<h4>Abs</h4>
-		<% @exercises.each do |exercise| %>
-			<% if exercise.part == "Abs" %>
-				<p><%= link_to exercise.name, exercise %></p>
+		<div class="showexercise">
+			<h4>Abs</h4>
+			<% @exercises.each do |exercise| %>
+				<% if exercise.part == "Abs" %>
+					<p><%= link_to exercise.name, exercise %></p>
+				<% end %>
 			<% end %>
-		<% end %>
-
-		<h4>Back</h4>
-		<% @exercises.each do |exercise| %>
-			<% if exercise.part == "Back" %>
-				<p><%= link_to exercise.name, exercise %></p>
+		</div>
+		
+		<div class="showexercise">
+			<h4>Lower Back</h4>
+			<% @exercises.each do |exercise| %>
+				<% if exercise.part == "Lower Back" %>
+					<p><%= link_to exercise.name, exercise %></p>
+				<% end %>
 			<% end %>
-		<% end %>
+		</div>
 
-		<h4>Biceps</h4>
-		<% @exercises.each do |exercise| %>
-			<% if exercise.part == "Biceps" %>
-				<p><%= link_to exercise.name, exercise %></p>
+		<div class="showexercise">
+			<h4>Upper Back</h4>
+			<% @exercises.each do |exercise| %>
+				<% if exercise.part == "Upper Back" %>
+					<p><%= link_to exercise.name, exercise %></p>
+				<% end %>
 			<% end %>
-		<% end %>
+		</div>
 
-		<h4>Calves</h4>
-		<% @exercises.each do |exercise| %>
-			<% if exercise.part == "Calves" %>
-				<p><%= link_to exercise.name, exercise %></p>
+		<div class="showexercise">
+			<h4>Biceps</h4>
+			<% @exercises.each do |exercise| %>
+				<% if exercise.part == "Biceps" %>
+					<p><%= link_to exercise.name, exercise %></p>
+				<% end %>
 			<% end %>
-		<% end %>
+		</div>
 
-		<h4>Chest</h4>
-		<% @exercises.each do |exercise| %>
-			<% if exercise.part == "Chest" %>
-				<p><%= link_to exercise.name, exercise %></p>
+		<div class="showexercise">
+			<h4>Calves</h4>
+			<% @exercises.each do |exercise| %>
+				<% if exercise.part == "Calves" %>
+					<p><%= link_to exercise.name, exercise %></p>
+				<% end %>
 			<% end %>
-		<% end %>
+		</div>
 
-		<h4>Forearms</h4>
-		<% @exercises.each do |exercise| %>
-			<% if exercise.part == "Forearms" %>
-				<p><%= link_to exercise.name, exercise %></p>
+		<div class="showexercise">
+			<h4>Chest</h4>
+			<% @exercises.each do |exercise| %>
+				<% if exercise.part == "Chest" %>
+					<p><%= link_to exercise.name, exercise %></p>
+				<% end %>
 			<% end %>
-		<% end %>
+		</div>
 
-		<h4>Legs</h4>
-		<% @exercises.each do |exercise| %>
-			<% if exercise.part == "Legs" %>
-				<p><%= link_to exercise.name, exercise %></p>
+		<div class="showexercise">
+			<h4>Forearms</h4>
+			<% @exercises.each do |exercise| %>
+				<% if exercise.part == "Forearms" %>
+					<p><%= link_to exercise.name, exercise %></p>
+				<% end %>
 			<% end %>
-		<% end %>
+		</div>
 
-		<h4>Shoulders</h4>
-		<% @exercises.each do |exercise| %>
-			<% if exercise.part == "Shoulders" %>
-				<p><%= link_to exercise.name, exercise %></p>
+		<div class="showexercise">
+			<h4>Legs</h4>
+			<% @exercises.each do |exercise| %>
+				<% if exercise.part == "Legs" %>
+					<p><%= link_to exercise.name, exercise %></p>
+				<% end %>
 			<% end %>
-		<% end %>
+		</div>
 
-		<h4>Triceps</h4>
-		<% @exercises.each do |exercise| %>
-			<% if exercise.part == "Triceps" %>
-				<p><%= link_to exercise.name, exercise %></p>
+		<div class="showexercise">
+			<h4>Shoulders</h4>
+			<% @exercises.each do |exercise| %>
+				<% if exercise.part == "Shoulders" %>
+					<p><%= link_to exercise.name, exercise %></p>
+				<% end %>
 			<% end %>
-		<% end %>
+		</div>
 
+		<div class="showexercise">
+			<h4>Triceps</h4>
+			<% @exercises.each do |exercise| %>
+				<% if exercise.part == "Triceps" %>
+					<p><%= link_to exercise.name, exercise %></p>
+				<% end %>
+			<% end %>
+		</div>
 	</div>
-	<br><br>
-  <%= link_to "Add New Exercise", new_exercise_path, :class=>"btn btn-primary btn-xs", :id=>"journal" %>
-  <br>
-  <%= link_to "Back to Workouts Calendar", workouts_path %>
+	<div>
+	  <%= link_to "Add New Exercise", new_exercise_path, :class=>"btn btn-primary btn-xs", :id=>"journal" %>
+	  <br>
+	  <%= link_to "Back to Workouts Calendar", workouts_path %>
+  </div>
 </div>

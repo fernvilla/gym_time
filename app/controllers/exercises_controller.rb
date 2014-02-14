@@ -47,6 +47,7 @@ class ExercisesController < ApplicationController
   	@exercise = Exercise.find(params[:id])
 
   	if @exercise.update(exercise_params)
+      # Notify which specific exercise was updated
   		flash[:notice] = "Successfully Updated #{@exercise.name}!"
   		redirect_to action: 'index'
   	else
@@ -64,6 +65,6 @@ class ExercisesController < ApplicationController
 private
 
 	def exercise_params
-		params.require(:exercise).permit(:name, :link, :video)	
+		params.require(:exercise).permit(:name, :link, :video, :part)	
 	end
 end

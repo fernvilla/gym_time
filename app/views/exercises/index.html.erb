@@ -2,11 +2,74 @@
 	<h3>Manage Exercises</h3>
 	<p class="notice"><%= flash[:notice] %></p>
 	<div class="entries">
+		all
 		<% @exercises.each do |exercise| %>
-			<p>
-			<%= link_to exercise.name, exercise %>
-			</p>
+				<%= link_to exercise.name, exercise %>
 		<% end %>
+
+		<h4>Abs</h4>
+		<% @exercises.each do |exercise| %>
+			<% if exercise.part == "Abs" %>
+				<%= link_to exercise.name, exercise %>
+			<% end %>
+		<% end %>
+
+		<h4>Back</h4>
+		<% @exercises.each do |exercise| %>
+			<% if exercise.part == "Back" %>
+				<%= link_to exercise.name, exercise %>
+			<% end %>
+		<% end %>
+
+		<h4>Biceps</h4>
+		<% @exercises.each do |exercise| %>
+			<% if exercise.part == "Biceps" %>
+				<%= link_to exercise.name, exercise %>
+			<% end %>
+		<% end %>
+
+		<h4>Calves</h4>
+		<% @exercises.each do |exercise| %>
+			<% if exercise.part == "Calves" %>
+				<%= link_to exercise.name, exercise %>
+			<% end %>
+		<% end %>
+
+		<h4>Chest</h4>
+		<% @exercises.each do |exercise| %>
+			<% if exercise.part == "Chest" %>
+				<%= link_to exercise.name, exercise %>
+			<% end %>
+		<% end %>
+
+		<h4>Forearms</h4>
+		<% @exercises.each do |exercise| %>
+			<% if exercise.part == "Forearms" %>
+				<%= link_to exercise.name, exercise %>
+			<% end %>
+		<% end %>
+
+		<h4>Legs</h4>
+		<% @exercises.each do |exercise| %>
+			<% if exercise.part == "Legs" %>
+				<%= link_to exercise.name, exercise %>
+			<% end %>
+		<% end %>
+
+		<h4>Shoulders</h4>
+		<% @exercises.each do |exercise| %>
+			<% if exercise.part == "Shoulders" %>
+				<%= link_to exercise.name, exercise %>
+			<% end %>
+		<% end %>
+
+		<h4>Triceps</h4>
+		<% @exercises.each do |exercise| %>
+			<% if exercise.part == "Triceps" %>
+				<%= link_to exercise.name, exercise %>
+			<% end %>
+		<% end %>
+
 	</div>
 	<br><br>
   <%= link_to "Add New Exercise", new_exercise_path, :class=>"btn btn-primary btn-xs", :id=>"journal" %>

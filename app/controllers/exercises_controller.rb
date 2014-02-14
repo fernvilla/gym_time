@@ -47,7 +47,7 @@ class ExercisesController < ApplicationController
   	@exercise = Exercise.find(params[:id])
 
   	if @exercise.update(exercise_params)
-  		flash[:notice] = "Successfully Updated Your Exercise!"
+  		flash[:notice] = "Successfully Updated #{@exercise.name}!"
   		redirect_to action: 'index'
   	else
   		render action: 'edit'

@@ -15,9 +15,10 @@
 	border: 1px solid #777777;
 }
 
-#select {
-	font-size: 20px;
-	height: 20px;
+#select * {
+	font-size: 15px;
+	height: 30px;
+	background-color: black;
 }
 
 .showexercise {
@@ -29,9 +30,9 @@
 	text-align: center;
 	font-size: 14px;
 
-		a {
-				color: #cccccc;
-		}
+	a {
+		color: #cccccc;
+	}
 }
 
 .showexercise>h4 {

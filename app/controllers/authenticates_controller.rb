@@ -15,7 +15,7 @@ class AuthenticatesController < ApplicationController
 			session[:user_id] = user.id
 			redirect_to workouts_path
 		else
-			
+			render 'new'
 			flash[:notice] = "User name and/or password is invalid"
   	end
 	end

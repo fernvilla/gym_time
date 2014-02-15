@@ -17,10 +17,11 @@
 							<%= workout.body_part %>
 							<hr>
 							<p>EXERCISE(S):</p>
-							<% workout.exercises.each do |exercise|%>
+							<!-- Limit 3 exercises showing on table -->
+							<% workout.exercises.take(3).each do |exercise|%>
 							<p><%= exercise.name%></p>
 							<% end %>
-							<h6><%= link_to "(view workout page)", workout %></h6>
+							<h6><%= link_to "(view all exercises for workout)", workout %></h6>
 							<% break %>
 						<% else %>
 							<p><%= "No Workout Scheduled For Today." %></p>
@@ -38,13 +39,14 @@
 		</tr>
 		<tr>
 			<td>
-				<% current_user.entries.each do |entry| %>
+				<!-- Limit 3 entries to show -->
+				<% current_user.entries.take(3).each do |entry| %>
 					<p>
 					<%= link_to entry.title, entry %>
 					<%= "(#{entry.entry_date})" %>
 					</p>
 				<% end %>
-				<h6><%= link_to "(view all entries)", entries_path %></h6>
+				<h6><%= link_to "(view all journal entries)", entries_path %></h6>
 		</td>
 		</tr>
 	</table>

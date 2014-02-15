@@ -2,7 +2,7 @@ class EntriesController < ApplicationController
   def index
     if current_user
       # @entries = Entry.all
-      @entries = current_user.entries.order_by(:entry_date.desc)
+      @entries = current_user.entries.order_by(:entry_date.asc)
     else
       redirect_to new_authenticate_path
       flash[:notice] = "Please log in first to see your entries"

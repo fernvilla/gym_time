@@ -38,12 +38,12 @@ html, body {
 	color: #FFF;
 	font-size: 12px;	
 	text-decoration: none;
+	padding-left: 10px;
 }
 
 .navbar .nav > li > a:hover {
 	color: #777777;
 }
-
 
 .dropdown-menu {
 	background-color: #000;	
@@ -133,7 +133,7 @@ a {
 
 #upcoming {
   float: left;
-  margin: 30px 40px;
+  margin: 20px 40px;
 }
 
 #upcoming > table {

@@ -20,6 +20,8 @@ class User
   end
 
   before_save :hash_stuff
+  # downcase users for login purposes
+  # before_save { self.username = username.downcase }
 
   private
 

@@ -5,6 +5,7 @@ class WorkoutsController < ApplicationController
       # @workouts = Workout.all
       # Only show assigned users workouts and order them by earliest date for json
       @workouts = current_user.workouts.order_by(:workout_date.asc)
+      @time = Time.now.strftime("%Y-%m-%d")
     else
       redirect_to new_authenticate_path
       flash[:notice] = "Please log in first to see your workouts"

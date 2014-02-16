@@ -4,15 +4,12 @@
 			<th>Today's Workout</th>
 		</tr>
 		<tr>
-			<td>
-				<!-- Workouts sorted by date in workouts controller -->
-				<% time = Time.now.strftime("%Y-%m-%d") %>
-				
+			<td>				
 				<% @workouts.each do |workout| %>
 					<!-- Check first to make sure that loop doesnt pick up previous days -->
-					<% if workout.workout_date >= time %>
+					<% if workout.workout_date >= @time %>
 						<!-- Only show today's workout -->
-						<% if workout.workout_date == time%>
+						<% if workout.workout_date == @time%>
 							<%= workout.workout_date %>
 							<hr>
 							<p>BODY PART(S):</p>

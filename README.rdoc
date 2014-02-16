@@ -1,1 +1,3 @@
+Workout calendar will full CRUD functionality. Allows the user to create single workouts which are displayed automatically on their own calendar. Exercises can be added to own database (with external links and ability to embed optional YouTube video) which will then show as options when future workouts are created. Training progress can also be tracked by creating journal entries. Google Maps API used to map nearby gyms based on user's geolocation.
+
 http://gym-time.herokuapp.com

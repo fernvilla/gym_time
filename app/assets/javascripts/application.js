@@ -13,7 +13,6 @@
 //= require jquery
 //= require jquery.ui.datepicker
 //= require jquery_ujs
-//= require angular
 //= require fullcalendar
 //= require bootstrap
 //= require_tree .

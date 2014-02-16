@@ -3,7 +3,7 @@ class WorkoutsController < ApplicationController
     # Make sure user is logged in (applies to other methods also)
     if current_user
       # @workouts = Workout.all
-      # Only show assigned users workots and order them by earliest date for json
+      # Only show assigned users workouts and order them by earliest date for json
       @workouts = current_user.workouts.order_by(:workout_date.asc)
     else
       redirect_to new_authenticate_path
@@ -37,7 +37,6 @@ class WorkoutsController < ApplicationController
   	@workout = Workout.new(workout_params)
     # Assign workout to current user
     @workout.user = current_user 
-
   	if @workout.save
   		flash[:notice] = "Successfully Created A Workout!"
   		redirect_to action: 'index'
@@ -48,7 +47,6 @@ class WorkoutsController < ApplicationController
 
   def update
   	@workout = Workout.find(params[:id])
-
   	if @workout.update(workout_params)
   		flash[:notice] = "Successfully Updated Your Workout!"
   		redirect_to action: 'index'

@@ -1,1 +1,1 @@
-Gym-time.herokuapp.com
+http://gym-time.herokuapp.com

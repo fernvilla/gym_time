@@ -7,9 +7,11 @@
 			<td>
 				<!-- Workouts sorted by date in workouts controller -->
 				<% time = Time.now.strftime("%Y-%m-%d") %>
+				
 				<% @workouts.each do |workout| %>
-				<!-- Check first to make sure that loop doesnt pick up previous days -->
+					<!-- Check first to make sure that loop doesnt pick up previous days -->
 					<% if workout.workout_date >= time %>
+						<!-- Only show today's workout -->
 						<% if workout.workout_date == time%>
 							<%= workout.workout_date %>
 							<hr>
@@ -19,13 +21,15 @@
 							<p>EXERCISE(S):</p>
 							<!-- Limit 3 exercises showing on table -->
 							<% workout.exercises.take(3).each do |exercise|%>
-							<p><%= exercise.name%></p>
+								<p><%= exercise.name%></p>
 							<% end %>
 							<h6><%= link_to "(view all exercises for workout)", workout %></h6>
+							<!-- Break loop as soon as workout found to prevent else statement showing -->
 							<% break %>
 						<% else %>
 							<p><%= "No Workout Scheduled For Today." %></p>
 							<p><%= "Rest Up And Get Ready For The Next One!" %></p>	
+							<!-- Break loop if there is not workout today -->
 							<% break %>
 						<% end %>
 					<% end %>
@@ -42,8 +46,8 @@
 				<!-- Limit 3 entries to show -->
 				<% current_user.entries.take(3).each do |entry| %>
 					<p>
-					<%= link_to entry.title, entry %>
-					<%= "(#{entry.entry_date})" %>
+						<%= link_to entry.title, entry %>
+						<%= "(#{entry.entry_date})" %>
 					</p>
 				<% end %>
 				<h6><%= link_to "(view all journal entries)", entries_path %></h6>
@@ -55,12 +59,12 @@
 <!--Calendar ID calls the jquery calendar to render-->
 <div id="calendar">
   <br>
-  <%= link_to "Add New Workout", new_workout_path, :class=>"btn btn-primary btn-xs" %>
-  &nbsp;
+  <%= link_to "Add New Workout", new_workout_path, :class=>"btn btn-primary btn-xs" %>&nbsp;
   <%= link_to "Add Journal Entry", new_entry_path, :class=> "btn btn-default btn-xs", :id=>"journal" %>
   <p class="notice"><%= flash[:notice] %></p>
 </div> 
 
+<!-- Calendar function with data/json source paths -->
 <script> $(document).ready(function() {
     $('#calendar').fullCalendar({
       aspectRatio: 1.8,

@@ -1,6 +1,10 @@
 <div class="workout">
 	<h2>Edit Workout</h2>
 	<%= render partial: 'form' %>
-	<span class="btn btn-danger" ><%= link_to "Delete Workout", @workout , {method: :delete, confirm: "Are You Sure You Want To Delete This Workout?"} %></span>
-	<span class="btn btn-default"><%= link_to "Go Back", workouts_path %></span>
+	<span class="btn btn-danger" >
+		<%= link_to "Delete Workout", @workout , {method: :delete, confirm: "Are You Sure You Want To Delete This Workout?"} %>
+	</span>
+	<span class="btn btn-default">
+		<%= link_to "Go Back", workouts_path %>
+	</span>
 </div>

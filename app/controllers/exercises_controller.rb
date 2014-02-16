@@ -33,8 +33,8 @@ class ExercisesController < ApplicationController
 
   def create
   	@exercise = Exercise.new(exercise_params)
+    # Attach current user to exercise being created
     @exercise.user = current_user 
-
   	if @exercise.save
   		flash[:notice] = "Successfully Created An Exercise!"
   		redirect_to action: 'index'
@@ -45,7 +45,6 @@ class ExercisesController < ApplicationController
 
   def update
   	@exercise = Exercise.find(params[:id])
-
   	if @exercise.update(exercise_params)
       # Notify which specific exercise was updated
   		flash[:notice] = "Successfully Updated #{@exercise.name}!"

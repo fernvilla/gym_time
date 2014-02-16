@@ -2,6 +2,7 @@ class EntriesController < ApplicationController
   def index
     if current_user
       # @entries = Entry.all
+      # Order earliest by earliest date
       @entries = current_user.entries.order_by(:entry_date.asc)
     else
       redirect_to new_authenticate_path
@@ -33,8 +34,8 @@ class EntriesController < ApplicationController
 
   def create
   	@entry = Entry.new(entry_params)
+    # Attach entry to current user 
     @entry.user = current_user 
-
   	if @entry.save
   		flash[:notice] = "Successfully Created An Entry!"
   		redirect_to action: 'index'
@@ -45,7 +46,6 @@ class EntriesController < ApplicationController
 
   def update
   	@entry = Entry.find(params[:id])
-
   	if @entry.update(entry_params)
   		flash[:notice] = "Successfully Updated Your Entry!"
   		redirect_to action: 'index'
